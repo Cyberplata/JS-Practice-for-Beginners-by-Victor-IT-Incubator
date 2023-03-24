@@ -65,4 +65,5 @@ function getUserName(params) {
     return name;
 }
 
-getUserName();
+const userName = getUserName(); // то что функция вернёт мы хотим сохранить
+const randomNumber = getRandomNumber();
