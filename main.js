@@ -58,6 +58,8 @@ function getUserName(params) {
         name = prompt('Твоё имя, друг?', '');
         if(name){
             condition = false;
+        } else {
+            alert("Пиши, не выпендривайся");
         }
     }
     return name;
