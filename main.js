@@ -46,10 +46,8 @@ const settings = {
     attempts: 10
 }
 
-function getRandomNumber() {
-    const number = Math.round(Math.random() * 100);
-    return number;
-}
+//преобразовали в стрелочную функцию
+const getRandomNumber = () => Math.round(Math.random() * 100);
 
 function getUserName(params) {
     let condition = true;
@@ -67,3 +65,7 @@ function getUserName(params) {
 
 const userName = getUserName(); // то что функция вернёт мы хотим сохранить
 const randomNumber = getRandomNumber();
+
+const game = () => {
+    
+}
