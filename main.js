@@ -1,5 +1,5 @@
 //переменные
-const userName = 'Bobs';
+const userName = 'Bob';
 let age = 23;
 //условные конструкции
 if(userName === 'Bob'){
@@ -15,3 +15,10 @@ for (let index = 0; index < 3; index++) {
 //массив
 const array = ['a', 'b', 'c', 'd'];
 alert(array[0]); 
+
+//объект (сущность)
+const user = {
+    name: 'Bob',
+    age: 23
+}
+alert(user.name);
