@@ -22,3 +22,19 @@ const user = {
     age: 23
 }
 alert(user.name);
+
+//функция
+function getUser() {
+    const name = prompt('Твоё имя друг?', '');
+    const age = prompt('Сколько тебе лет?');
+    if(name) {
+        alert(`Привет, ${name}!`);       
+    }
+
+    return (
+        { name: name, age: age } 
+        )
+}
+
+const itUser = getUser();
+console.log(itUser);
