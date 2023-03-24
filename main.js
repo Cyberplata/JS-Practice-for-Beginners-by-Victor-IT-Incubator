@@ -66,6 +66,26 @@ function getUserName(params) {
 const userName = getUserName(); // то что функция вернёт мы хотим сохранить
 const randomNumber = getRandomNumber();
 
-const game = () => {
-    
+function game(objSettings, number, name) {
+    // приветствие
+    alert(`Привет, ${name}!
+    Я загадал число в интервале от ${objSettings.min} до ${objSettings.max}.
+    У тебя есть ${objSettings.attempt} попыток отгадать его. Го?`)
+    // цикл ответ-проверка
+    for (let index = 0; index < bjSettings.attempt; index++) {
+        const anwer = prompt('Давай свой варик', 'Введи число')
+        if(anwer > number) {
+            alert(`Моё число меньше. Осталось ${10 - index - 1} попыток`)
+        } else if(anwer > number) {
+            alert();
+        } else {
+            //ПОБЕДА!
+            alert('You win!!!');
+            return
+        }
+    }
+    // проигрыш
+    alert('Ты лузер! С тебя 10 баксов!!!')
 }
+
+game(settings, randomNumber, userName);
