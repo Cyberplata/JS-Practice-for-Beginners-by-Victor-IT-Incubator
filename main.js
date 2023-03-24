@@ -38,3 +38,17 @@
 
 // const itUser = getUser();
 // console.log(itUser);
+
+
+const settings = {
+    min: 0,
+    max: 100,
+    attempts: 10
+}
+
+function getRandomNumber() {
+    const number = Math.round(Math.random() * 100);
+    return number;
+}
+
+alert(getRandomNumber());
