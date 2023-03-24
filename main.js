@@ -51,4 +51,16 @@ function getRandomNumber() {
     return number;
 }
 
-alert(getRandomNumber());
+function getUserName(params) {
+    let condition = true;
+    let name;
+    while (condition) { //true
+        name = prompt('Твоё имя, друг?', '');
+        if(name){
+            condition = false;
+        }
+    }
+    return name;
+}
+
+getUserName();
