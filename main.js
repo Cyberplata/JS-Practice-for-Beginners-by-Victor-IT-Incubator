@@ -7,3 +7,8 @@ if(userName === 'Bob'){
 } else {
     alert(`Я тебя не знаю`)
 }
+//циклы
+for (let index = 0; index < 3; index++) {
+    alert(index);
+    
+}
