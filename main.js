@@ -81,7 +81,7 @@ function game(objSettings, number, name) {
         if(answer > number) {
             alert(`Моё число меньше. 
             Осталось ${objSettings.attempts - index - 1} попыток
-            ${answers.join()}`) //все наши ответы-массива склеивает в одну строку
+            ${answers.join()}`) //все наши ответы-массива склеивает в одну строку с помощью метода join()
         } else if(answer < number) {
             alert(`Моё число больше. 
             Осталось ${objSettings.attempts - index - 1} попыток
