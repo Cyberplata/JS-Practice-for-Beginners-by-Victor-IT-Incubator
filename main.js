@@ -67,17 +67,25 @@ const userName = getUserName(); // то что функция вернёт мы 
 const randomNumber = getRandomNumber();
 
 function game(objSettings, number, name) {
+    //создаём массив
+    const answers = [];
+
     // приветствие
     alert(`Привет, ${name}!
     Я загадал число в интервале от ${objSettings.min} до ${objSettings.max}.
-    У тебя есть ${objSettings.attempt} попыток отгадать его. Го?`)
+    У тебя есть ${objSettings.attempts} попыток отгадать его. Го?`)
     // цикл ответ-проверка
-    for (let index = 0; index < bjSettings.attempt; index++) {
-        const anwer = prompt('Давай свой варик', 'Введи число')
-        if(anwer > number) {
-            alert(`Моё число меньше. Осталось ${10 - index - 1} попыток`)
-        } else if(anwer > number) {
-            alert();
+    for (let index = 0; index < objSettings.attempts; index++) {
+        const answer = prompt('Давай свой варик', 'Введи число')
+        answers.push(answer)
+        if(answer > number) {
+            alert(`Моё число меньше. 
+            Осталось ${objSettings.attempts - index - 1} попыток
+            ${answers.join()}`) //все наши ответы-массива склеивает в одну строку
+        } else if(answer < number) {
+            alert(`Моё число больше. 
+            Осталось ${objSettings.attempts - index - 1} попыток
+            ${answers.join()}`);
         } else {
             //ПОБЕДА!
             alert('You win!!!');
